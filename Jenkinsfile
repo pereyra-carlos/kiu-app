@@ -8,7 +8,6 @@ pipeline{
             steps{
                 echo "Building the App..."
                 sh 'ls -la'
-                sh 'cat app.py'
             }
 
         }
