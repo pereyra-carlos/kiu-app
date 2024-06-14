@@ -1,0 +1,35 @@
+pipeline:
+  identifier: Build_pereyra_carlos_kiu_app_1718367589749
+  name: Build kiu-app
+  orgIdentifier: default
+  projectIdentifier: TestProject
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github
+        repoName: pereyra-carlos/kiu-app
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          caching:
+            enabled: true
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Docker
+        type: CI
