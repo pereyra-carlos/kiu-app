@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_pereyra_carlos_kiu_app_1718367589749-push-trigger-input-set
+  identifier: Build_pereyra_carlos_kiu_app_1718367589749pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: TestProject
+  pipeline:
+    identifier: Build_pereyra_carlos_kiu_app_1718367589749
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
